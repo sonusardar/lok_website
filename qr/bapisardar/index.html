@@ -53,6 +53,12 @@
             font-weight: 650;
             font-style: normal;
         }
+
+        @media only screen and (min-width: 600px) {
+            .font-adjust {
+                font-size: 12px !important;
+            }
+        }
     </style>
 
 </head>
@@ -82,25 +88,35 @@
             <div class="col-12">
 
                 <div class="card card-round mb-3 mt-5">
-                    <div class="card-body card-round card-font">
+                    <div class="card-body card-round card-font" onclick="LocationHandle('WEB')">
                         <i class="fa-brands fa-internet-explorer"></i> Website
                     </div>
                 </div>
                 <div class="card card-round mb-3 my-3">
-                    <div class="card-body card-round card-font">
+                    <div class="card-body card-round card-font" onclick="LocationHandle('MAP')">
                         <i class="fa-solid fa-compass"></i> Head office Location - Google Maps
                     </div>
                 </div>
 
                 <div class="card card-round my-3 ">
-                    <div class="card-body card-round card-font">
+                    <div class="card-body card-round card-font" onclick="LocationHandle('WP')">
                         <i class="fa-brands fa-whatsapp"></i> &nbsp; WhatsApp
                     </div>
                 </div>
 
                 <div class="card card-round my-3">
-                    <div class="card-body card-round card-font">
+                    <div class="card-body card-round card-font" onclick="LocationHandle('EMAIL')">
                         <i class="fa-solid fa-envelope"></i> &nbsp; Email
+                    </div>
+                </div>
+                <div class="card card-round my-3">
+                    <div class="card-body card-round card-font" onclick="LocationHandle('CALL')">
+                        <i class="fas fa-phone"></i> &nbsp; Phone Call
+                    </div>
+                </div>
+                <div class="card card-round my-3">
+                    <div class="card-body card-round card-font" onclick="LocationHandle('SAVE')">
+                        <i class="fas fa-address-card"></i> &nbsp; Save Contact
                     </div>
                 </div>
 
@@ -113,86 +129,164 @@
         <div class="row">
 
             <div class="col-md-3 col-lg-3 col-xl-3 col-sm-12 col-12">
-                <div class="card mb-5" >
+                <div class="card mb-5">
                     <img src="../../image/lt-control-panel.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">LT Control Panel</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        
+                        <h5 class="card-title">LT & HT Control Panel</h5>
+                        <p class="card-text">We are Manufacturing HT & LT Control Panel and also provided Installation &
+                            Maintenance Service. </p>
+
                     </div>
                 </div>
             </div>
 
 
-            <div class="col-md-3 col-lg-3 col-xl-3 col-sm-6 col-6">
-                <div class="card mb-5" >
+            <div class="col-md-3 col-lg-3 col-xl-3 col-sm-12 col-12">
+                <div class="card mb-5">
                     <img src="../../image/lt-distribution-boxes-1000x1000.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">LT Distribution Box</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        
+                        <h5 class="card-title">LT & HT Distribution Box</h5>
+                        <p class="card-text">We are Manufacturing HT & LT Distribution Box and also provided
+                            Installation & Maintenance Service.</p>
+
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-3 col-lg-3 col-xl-3 col-sm-6 col-6">
-                <div class="card mb-5" >
+            <div class="col-md-3 col-lg-3 col-xl-3 col-sm-12 col-12">
+                <div class="card mb-5">
                     <img src="../../image/havells-300-sq-mm-3-5-core-make-1000x1000.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Aluminum LT Power Cable</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        
+                        <h5 class="card-title">Aluminum Power Cable</h5>
+                        <p class="card-text">We are supplying Aluminum Power Cable and also provided Laying &
+                            Installation & Maintenance Service.
+                        </p>
+
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-3 col-lg-3 col-xl-3 col-sm-6 col-6">
-                <div class="card mb-5" >
-                    <img src="../../image/630-kva-distribution-transformer-1000x1000.jpg" class="card-img-top" alt="...">
+            <div class="col-md-3 col-lg-3 col-xl-3 col-sm-12 col-12">
+                <div class="card mb-5">
+                    <img src="../../image/630-kva-distribution-transformer-1000x1000.jpg" class="card-img-top"
+                        alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Transformer</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        
+                        <p class="card-text">We are supplying Transformer and also provided Installation & Maintenance
+                            Service .
+
+
+                        </p>
+
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-3 col-lg-3 col-xl-3 col-sm-6 col-6">
-                <div class="card mb-5" >
+            <div class="col-md-3 col-lg-3 col-xl-3 col-sm-12 col-12">
+                <div class="card mb-5">
                     <img src="../../image/low-voltage-cable-laying.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">LT & HT Cable Laying</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-3 col-lg-3 col-xl-3 col-sm-6 col-6">
-                <div class="card mb-5" >
-                    <img src="../../image/low-voltage-cable-laying.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">LT & HT Cable Laying</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        
-                    </div>
-                </div>
-            </div>
-            
+                        <h5 class="card-title">Cable Laying & Jointing</h5>
+                        <p class="card-text">We are provide Laying of LT & HT Power Cable and also provided Micro
+                            Tunneling with HDPE Pipe </p>
 
-            
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-lg-3 col-xl-3 col-sm-12 col-12">
+                <div class="card mb-5">
+                    <img src="../../image/61UbO1BU6pL._SL1300_.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Monitoring & Energy Meter </h5>
+                        <p class="card-text">We are provided Installation and Maintenance of Energy Meter & Monitoring
+                            System </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-lg-3 col-xl-3 col-sm-12 col-12">
+                <div class="card mb-5">
+                    <img src="../../image/electrical-circuits-design.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Electrical Wiring </h5>
+                        <p class="card-text font-adjust">We are supplying Electrical Wiring Material and also provided
+                            Installation
+                            & Maintenance Service. with work experience in Residential Complex & Factory </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-lg-3 col-xl-3 col-sm-12 col-12">
+                <div class="card mb-5">
+                    <img src="../../image/Untitled-1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Electrical Architecture Design </h5>
+                        <p class="card-text">We are provide Electrical Wiring Architecture Design & Electrical Drawing
+                            of the project. </p>
+
+                    </div>
+                </div>
+            </div>
+
+
+
 
         </div>
     </div>
 
 
 
+    <script>
+
+        const yourEmail = "lokenathelectric73@gmail.com";
+        const subject = "inquiry";
+        const message = ""
+
+        const lastName = "SARDAR"
+        const firstName = "BAPI"
+        const organization = "LOKENATH ELECTRIC"
+        const title = "Proprietor";
+        const street = "Boral Main Road, Rakshit More, Indian Gas Building 1st Floor";
+        const city = "Kolkata";
+        const state = "West Bengal";
+        const zip = "700154";
+        const country = "India";
+
+        const phoneNo = "914339828";
+        const mobileNo = "9748199984";
+        const email = "lokenathelectric73@gmail.com";
+        const website = "https://www.lokenathelectric.com";
+
+
+        function LocationHandle(mode) {
+            if (mode === "CALL") {
+                return window.location.href = "tel:+919143390823";
+            }
+            else if (mode === "WEB") {
+                return window.location.href = "https://lokenathelectric.com/";
+            }
+            else if (mode === "MAP") {
+                return window.location.href = "https://maps.app.goo.gl/msA6FRQ6RjP9Z8GZ8";
+            }
+            else if (mode === "WP") {
+                return window.location.href = "https://api.whatsapp.com/send/?phone=9143390828&text&type=phone_number&app_absent=0";
+            }
+
+            else if (mode === "EMAIL") {
+                return window.location.href = `MATMSG:TO:${yourEmail};SUB:${subject};BODY:${message};;`;
+            }
+
+            else if (mode === "SAVE") {
+                return window.location.href = `BEGIN:VCARD\nVERSION:4.0\nN:${lastName}\nFN:${firstName + '' + lastName}\nORG:${organization}\nTITLE:${title}\nADR:;;${street};${city};${state};${zip},${country}\nTEL;WORK;VOICE:${phoneNo}\nTEL;CELL:${mobileNo}\nTEL;FAX:${fax}\nEMAIL;WORK;INTERNET:${email}\nURL:${website}\nEND:VCARD`
+                    ;
+            }
+
+        }
+    </script>
 
 
 
