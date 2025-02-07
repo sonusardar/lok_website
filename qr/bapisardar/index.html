@@ -107,6 +107,7 @@
                 <div class="card card-round my-3">
                     <div class="card-body card-round card-font" onclick="LocationHandle('EMAIL')">
                         <i class="fa-solid fa-envelope"></i> &nbsp; Email
+                        
                     </div>
                 </div>
                 <div class="card card-round my-3">
@@ -114,11 +115,12 @@
                         <i class="fas fa-phone"></i> &nbsp; Phone Call
                     </div>
                 </div>
-                <div class="card card-round my-3">
+
+                <!-- <div class="card card-round my-3">
                     <div class="card-body card-round card-font" onclick="LocationHandle('SAVE')">
                         <i class="fas fa-address-card"></i> &nbsp; Save Contact
                     </div>
-                </div>
+                </div> -->
 
             </div>
 
@@ -242,6 +244,29 @@
 
     <script>
 
+        // var saveBtn = document.getElementById("save-btn");
+        // var saveBtn = document.getElementById("save-btn");
+        // saveBtn.addEventListener("click", function () {
+        //     // Get the contact information from the website
+        //     console.log("cl")
+        //     var contact = {
+        //         name: "John Smith",
+        //         phone: "555-555-5555",
+        //         email: "john@example.com"
+        //     };
+        //     // create a vcard file
+        //     var vcard = "BEGIN:VCARD\nVERSION:4.0\nFN:" + contact.name + "\nTEL;TYPE=work,voice:" + contact.phone + "\nEMAIL:" + contact.email + "\nEND:VCARD";
+        //     var blob = new Blob([vcard], { type: "text/vcard" });
+        //     var url = URL.createObjectURL(blob);
+
+        //     const newLink = document.createElement('a');
+        //     newLink.download = contact.name + ".vcf";
+        //     newLink.textContent = contact.name;
+        //     newLink.href = url;
+
+        //     newLink.click();
+        // });
+
         const yourEmail = "lokenathelectric73@gmail.com";
         const subject = "inquiry";
         const message = ""
@@ -260,11 +285,12 @@
         const mobileNo = "9748199984";
         const email = "lokenathelectric73@gmail.com";
         const website = "https://www.lokenathelectric.com";
+        const fax = "";
 
 
         function LocationHandle(mode) {
             if (mode === "CALL") {
-                return window.location.href = "tel:+919143390823";
+                return window.location.href = "tel:+919143390828";
             }
             else if (mode === "WEB") {
                 return window.location.href = "https://lokenathelectric.com/";
@@ -277,12 +303,35 @@
             }
 
             else if (mode === "EMAIL") {
-                return window.location.href = `MATMSG:TO:${yourEmail};SUB:${subject};BODY:${message};;`;
+                return window.location = `mailto:${yourEmail}?subject=${subject}&body=${message}`;
+                
             }
 
             else if (mode === "SAVE") {
-                return window.location.href = `BEGIN:VCARD\nVERSION:4.0\nN:${lastName}\nFN:${firstName + '' + lastName}\nORG:${organization}\nTITLE:${title}\nADR:;;${street};${city};${state};${zip},${country}\nTEL;WORK;VOICE:${phoneNo}\nTEL;CELL:${mobileNo}\nTEL;FAX:${fax}\nEMAIL;WORK;INTERNET:${email}\nURL:${website}\nEND:VCARD`
-                    ;
+
+                var contact = {
+                    name: "BAPI SARDAR",
+                    phone: "+91 9143390828",
+                    email: "lokenathelectric73@gmail.com",
+                    title: "Proprietor",
+                    
+                };
+                // // create a vcard file
+                var vcard = "BEGIN:VCARD\nVERSION:4.0\nFN:" + contact.name + "\nTEL;TYPE=work,voice:" + contact.phone + "\nEMAIL:" + contact.email + "\nTITLE:" + contact.title +  "\nEND:VCARD";
+
+                // var vcard = `BEGIN:VCARD\nVERSION:4.0\nN:${lastName}\nFN:${firstName + '' + lastName}\nORG:${organization}\nTITLE:${title}\nADR:;;${street};${city};${state};${zip},${country}\nTEL;WORK;VOICE:${phoneNo}\nTEL;CELL:${mobileNo}\nTEL;FAX:${fax}\nEMAIL;WORK;INTERNET:${email}\nURL:${website}\nEND:VCARD`;
+
+
+                var blob = new Blob([vcard], { type: "text/vcard" });
+                var url = URL.createObjectURL(blob);
+
+                const newLink = document.createElement('a');
+                newLink.download = contact.name + ".vcf";
+                newLink.textContent = contact.name;
+                newLink.href = url;
+
+                newLink.click();
+
             }
 
         }
